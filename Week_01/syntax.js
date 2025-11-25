@@ -68,6 +68,7 @@ console.log(namen, typeof(namen));
 console.log(birthdate, typeof(birthdate));
 console.log(leegObject, typeof(leegObject));
 console.log(nullVariabele, typeof(nullVariabele));
+console.log(leegobject)
 
 // object
 
