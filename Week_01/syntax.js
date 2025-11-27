@@ -202,6 +202,7 @@ default:
 	console.log('dit fruit ken ik niet');
 }
 
+<<<<<<< Updated upstream
 
 /*Opdracht: 
 Schrijf een stuk code waarbij je aangeeft of een jaar een schrikkeljaar is of niet. 
@@ -366,3 +367,15 @@ namen.forEach(function(item){console.log(item);});
 namen.forEach(item => {
 	console.log(item);
 });
+=======
+// Print voor een gegeven getal alle maaltafels tot 10 met oplossing.
+let getal = 5
+for (let i = 0; i < getal; i++) {
+	let product = getal * i
+	console.log(product)
+}
+
+
+// Verwijder alle spaties aan het begin van een string (zonder gebruik te maken van trim()) tip met slice kan je een stuk van een string verwijderen.
+// Print voor elke woord in een lijst het aantal karakters.
+>>>>>>> Stashed changes
