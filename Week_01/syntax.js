@@ -201,3 +201,168 @@ case 'druiven':
 default:
 	console.log('dit fruit ken ik niet');
 }
+
+
+/*Opdracht: 
+Schrijf een stuk code waarbij je aangeeft of een jaar een schrikkeljaar is of niet. 
+Schrijf een stuk code hoeveel dagen er in een bepaalde maand zitten.
+*/
+
+// schrikkeljaar is een jaar modulo 4 == 0 behalve als het % 100 == 0 is behalve als het % 400 is
+let jaar = 2000;
+if (jaar % 400 === 0){
+	console.log('schrikkeljaar');
+} else if(jaar % 4 ===0){
+	if(jaar % 100 === 0){
+		console.log('geen schrikkeljaar');
+	} else {
+		console.log('schrikkeljaar');
+	}
+} else {
+	console.log('geen schrikkeljaar');
+}
+
+let maand = 'maart';
+switch (maand){
+case 'februarie':
+	console.log('28 dagen');
+	break;
+case 'januari':
+case 'maart':
+case 'mei':
+case 'juli':
+case 'augustus':
+case 'oktober':
+case 'december':
+	console.log('31 dagen');
+	break;
+default:
+	console.log('30 dagen');
+}
+
+//for
+for(let i =0; i <=10; i++){
+	console.log(i);
+}
+
+//while
+let counter = 10;
+while(counter > 0){
+	counter -= 1;
+	console.log(counter);
+}
+
+//dowhile
+// minstens 1 keer uitgevoerd 
+counter = 0;
+do {
+	counter += 1;
+	console.log(counter);
+} while(counter < 10);
+
+//.foreach
+/*int Function(int age, int b){
+	return 0;
+}*/
+
+function logger(item){
+	console.log(item);
+}
+
+/*let a = logger(5);
+console.log(a);
+*/
+
+//console.log(namen);
+namen.forEach(logger);
+
+//for in
+namen[10] = 'Jens';
+// in een rij geeft dit de indices weer van de items (empty wordt genegeerd)
+// in een obj krijg je de keys weer van het object (de linkerzijde)
+for(let i in namen){
+	namen[i];
+	console.log(i);
+}
+for(let i in obj){
+	console.log(i);
+}
+//for of
+for(let i of namen){
+	console.log(i);
+}
+// dit niet gaat niet werken want object heeft exact de keys nodig
+/*for(let i of obj){
+	console.log(i);
+}*/
+
+/*Opdracht: 
+Print voor een gegeven getal alle maaltafels tot 10 met oplossing.
+Verwijder alle spaties aan het begin van een string (zonder gebruik te maken van trim()) tip met slice kan je een stuk van een string verwijderen.
+Print voor elke woord in een lijst het aantal karakters.
+*/
+//vraag 1
+let getal = 5;
+for(let i = 0; i < 10; i++){
+	console.log(getal + '*' + i + '=' + i*getal);
+	console.log(`${i}*${getal}=${i*getal}`);
+}
+
+//vraag 2
+let tekst = '     ik ben jens';
+while(tekst[0] == ' '){
+	console.log('spatie');
+	tekst = tekst.slice(1);
+}
+console.log(tekst);
+
+let idx = 0;
+for(idx; idx<tekst.length; idx++){
+	if(tekst[idx] != ' '){
+		break;
+	}
+}
+console.log(tekst.slice(idx));
+
+//vraag 3
+let lijstje = 'ik ben jens baetens'.split(' ');
+for(let woord of lijstje){
+	console.log(woord, woord.length);
+}
+
+
+//function without arguments
+function helloWorld(){
+	console.log('hello world!');
+}
+
+helloWorld();
+
+//function with arguments
+function helloWorld2(naam){
+	console.log(`hello world ${naam}`);
+}
+
+helloWorld2('Jens');
+
+function sum(a, b){
+	return a+b;
+}
+
+console.log(sum(10, 100));
+
+//self-invoking function
+
+(function(){
+	let localVar = 5;
+	//hierdoor kan je variabelen van andere bestanden/libraries niet aanpassen
+	// dit is veiliger
+})();
+
+//met naamloze functie
+namen.forEach(function(item){console.log(item);});
+
+//lambda expressies arrow function
+namen.forEach(item => {
+	console.log(item);
+});
